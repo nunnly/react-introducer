@@ -12,10 +12,25 @@ module.exports = merge(webpackBaseConfig, {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'test',
-            template: './public/index.html',
+            template: './public/dev.html',
             filename: 'index.html',
         })
     ],
+    module: {
+        rules: [{
+            test: /\.md$/,
+            use: [{
+                    loader: "html-loader"
+                },
+                {
+                    loader: "markdown-loader",
+                    options: {
+                        /* your options here */
+                    }
+                }
+            ]
+        }]
+    },
     devServer: {
         host: 'localhost',
         port: 1573,
