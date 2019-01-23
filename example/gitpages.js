@@ -1,4 +1,4 @@
-import README from '../README.md';
+import README from '../readme.md';
 document.querySelector('#box').innerHTML = README;
 
 hljs.configure({});

@@ -1,6 +1,6 @@
 {
   "name": "react-introducer",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A React component to help you introduce your product.",
   "main": "lib/pack.js",
   "scripts": {
