@@ -7,9 +7,8 @@ function findParentDomHasZ(target) {
 			if (target.computedStyleMap().has('z-index')) {
 				list.push(target);
 			}
-
 		} catch (e) {
-			console.error(e);
+			list.push(target);
 		}
 	}
 	return list
@@ -19,12 +18,14 @@ function addFixClass(list = [], className) {
 	list.forEach(v => {
 		v.className = `${v.className} ${className}`;
 	});
+	return list;
 }
 
 function removeFixClass(list = [], className) {
 	list.forEach(v => {
 		v.className = v.className.replace(className, '')
-	})
+	});
+	return list
 }
 
 export {

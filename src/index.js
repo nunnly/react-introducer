@@ -1,4 +1,6 @@
 import Intro from './Intro';
+import './style.less';
+
 import {
 	getController,
 	IntroMap,

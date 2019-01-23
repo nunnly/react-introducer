@@ -7,7 +7,7 @@
 ### useage
 
 ```jsx
-import {Intro, getController} from 'abc-intro';
+import {Intro, getController} from 'react-introducer';
 
 <Intro
  tooltip={<div>不添加则显示默认</div>}

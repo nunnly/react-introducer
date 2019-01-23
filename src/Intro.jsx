@@ -4,7 +4,6 @@ import { newController, getController } from './Controller';
 import { prefix } from "./config";
 import DefaultToolTip from "./DefaultToolTip";
 import { findParentDomHasZ, addFixClass, removeFixClass } from './utils';
-import './style.less';
 
 class Intro extends React.Component {
 	static propsTypes = {

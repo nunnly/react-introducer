@@ -11,7 +11,8 @@ const HELP_LAYOUT = `${prefix}-intro-helperLayout`;
 const TOOLTIP_LAYOUT = `${prefix}-intro-tooltipReferenceLayer`;
 
 class Controller {
-	constructor(intro) {
+	constructor(name, intro) {
+		this.name = name;
 		this.step = 0; // The controller current step;
 		this.prevIntro = null; // previous intro
 		this.currentIntro = null; // current Intro
@@ -253,7 +254,7 @@ function newController(intro) {
 		IntroMap[name].addIntro(intro);
 		return IntroMap[name];
 	} else {
-		const nc = new Controller(intro)
+		const nc = new Controller(name, intro)
 		IntroMap[name] = nc;
 		return nc;
 	}
